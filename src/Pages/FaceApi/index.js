@@ -102,8 +102,8 @@ const FaceApi = () => {
 
         return Promise.all(labels.map(async label => {
             const descriptions = []
-            for (let i = 1; i <= 2; i++) {
-                const img = await faceap.fetchImage(`${LABEL_URL}/${label}/${i}.jpeg`)
+            for (let i = 1; i <= 6; i++) {
+                const img = await faceap.fetchImage(`${LABEL_URL}/${label}/${i}.jpg`)
                 const detections = await faceap
                     .detectSingleFace(img)
                     .withFaceLandmarks()
