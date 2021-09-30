@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { Container } from './styles';
 import useWindowDimensions from '../../components/useWindowDimensions/index';
-
 import * as faceap from 'face-api.js';
 
 
@@ -97,12 +96,12 @@ const FaceApi = () => {
     const loadLabels = () => {
         const LABEL_URL = process.env.PUBLIC_URL + '/assets/labels';
         
-        const labels = ['Samuel Teles', 'Isabelli'];
+        const labels = ['Thiago Graziani Traue'];
 
         return Promise.all(labels.map(async label => {
             const descriptions = []
-            for (let i = 1; i <= 6; i++) {
-                const img = await faceap.fetchImage(`${LABEL_URL}/${label}/${i}.jpg`)
+            for (let i = 1; i <= 2; i++) {
+                const img = await faceap.fetchImage(`${LABEL_URL}/${label}/${i}.jpeg`)
                 const detections = await faceap
                     .detectSingleFace(img)
                     .withFaceLandmarks()
@@ -172,7 +171,7 @@ const FaceApi = () => {
                 ], box.bottomRight).draw(canvasRef.current)
     
 
-                if(label === 'Samuel Teles'){
+                if(label === 'Thiago Graziani Traue'){
                     setAutenticado(true)
                 }
             })
@@ -202,7 +201,7 @@ const FaceApi = () => {
                 autenticado ? (
                     <div className="cont-msg">
                         <h2>
-                            Boa Noite, Prof. Thiago
+                            Boa Noite, Prof. Thiago Graziani Traue 
                         </h2>
                     </div>
                 ):(

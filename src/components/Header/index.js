@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Button from '../Button';
 import {Container} from './styles';
 
-const Header = (props) => {
+const Header = () => {
     return(
         <Container>
             <div className="barHeader">

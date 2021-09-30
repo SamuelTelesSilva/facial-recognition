@@ -1,9 +1,8 @@
-import React, { useState, useEffect} from 'react';
+import React from 'react';
 import { Main, Layout, Principal, Apresentacao, AreaFaceApi} from './styles';
 import Header from '../../components/Header/index';
 import Footer from '../../components/Footer/index';
 import bannerPrincipal from '../../img/banner_principal1.png'
-import carinha from '../../img/carinha1.png'
 import Card from '../../components/Card';
 import FaceApi from '../FaceApi';
 
