@@ -74,7 +74,7 @@ const FaceApi = () => {
             if (Array.isArray(devices)) {
                 devices.forEach(device => {
 
-                    //console.log(devices) //Mostra as WebCam conectadas
+                    console.log(devices) //Mostra as WebCam conectadas
 
                     if (device.kind === 'videoinput') {                   
                         if (device.label.includes('DroidCam Source 3')) { //Coloca o nome label
@@ -178,7 +178,7 @@ const FaceApi = () => {
 
 
 
-            //console.log(detections)
+            console.log(detections)
 
         }, 100)
     }
