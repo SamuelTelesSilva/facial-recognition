@@ -44,7 +44,7 @@ const FaceApi = () => {
         loadModels();
     },[]);
 
-    /*
+    
     //Webcam Padrão
     const startVideo = () => {
         navigator.mediaDevices.enumerateDevices()
@@ -64,9 +64,10 @@ const FaceApi = () => {
             }
         })
     }
-    */
+    
 
 
+    /*
     //Escolher a Web Cam
     const startVideo = () => {
         navigator.mediaDevices.enumerateDevices()
@@ -92,6 +93,7 @@ const FaceApi = () => {
             }
         })
     }
+    */
 
     const loadLabels = () => {
         const LABEL_URL = process.env.PUBLIC_URL + '/assets/labels';
